@@ -523,7 +523,7 @@ int main()
 	   				else
     				a[x]=4;
     				display();
-	   		xyz:	cout<<"PLEASE MAKE A MOVE :\n 2 4 6 8\n"<<endl;
+	   		xyz:	cout<<"PLEASE MAKE A MOVE :\n 2(Down) 4(Left) 6(Right) 8(Up)\n"<<endl;
     				key= _getch();
     				if((key == '2') || (key == 's'))
     				ch=2;
