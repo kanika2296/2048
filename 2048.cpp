@@ -523,15 +523,15 @@ int main()
 	   				else
     				a[x]=4;
     				display();
-	   		xyz:	cout<<"PLEASE MAKE A MOVE :\n 2(Down) 4(Left) 6(Right) 8(Up)\n"<<endl;
+	   		xyz:	cout<<"PLEASE MAKE A MOVE :\n 2/S(Down) 4/A(Left) 6/D(Right) 8/W(Up)\n"<<endl;
     				key= _getch();
-    				if((key == '2') || (key == 's'))
+    				if((key == '2') || (key == 's')|| (key == 'S'))
     				ch=2;
-    				else if((key == '4') || (key == 'a'))
+    				else if((key == '4') || (key == 'a')|| (key == 'A'))
     				ch=4;
-    				else if((key == '6') || (key == 'd'))
+    				else if((key == '6') || (key == 'd')|| (key == 'D'))
     				ch=6;
-    				else if((key == '8')|| (key == 'w'))
+    				else if((key == '8')|| (key == 'w')|| (key == 'W'))
     				ch=8;
 					m=doch(ch);
 					if(m==false)
