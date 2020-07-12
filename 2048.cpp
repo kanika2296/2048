@@ -509,42 +509,40 @@ int main()
 	int x,ch;
 	char key= ' ';
 	bool k,m;
-		time_t r;
-		
-		while(a[0]==1 || a[1]==1 || a[2]==1 || a[3]==1 || a[4]==1 || a[5]==1 || a[6]==1 || a[7]==1 || a[8]==1 || a[9]==1 || a[10]==1 || a[11]==1 || a[12]==1 || a[13]==1 || a[14]==1 || a[15]==1)
-		{
-			abc:    r = time(NULL);
- 	  				x=r%16;
-    				if(a[x]!=1)
+	time_t r;
+	
+	while(a[0]==1 || a[1]==1 || a[2]==1 || a[3]==1 || a[4]==1 || a[5]==1 || a[6]==1 || a[7]==1 || a[8]==1 || a[9]==1 || a[10]==1 || a[11]==1 || a[12]==1 || a[13]==1 || a[14]==1 || a[15]==1)
+	{
+		abc:    r = time(NULL);
+ 			x=r%16;
+    			if(a[x]!=1)
     				goto abc;
-    				else 
-    				if(x%2==0)
+    			else 
+    			if(x%2==0)
     				a[x]=2;
-	   				else
+	   		else
     				a[x]=4;
-    				display();
-	   		xyz:	cout<<"PLEASE MAKE A MOVE :\n 2/S(Down) 4/A(Left) 6/D(Right) 8/W(Up)\n"<<endl;
-    				key= _getch();
-    				if((key == '2') || (key == 's')|| (key == 'S'))
+    			display();
+	   	xyz:	cout<<"PLEASE MAKE A MOVE :\n 2/S(Down) 4/A(Left) 6/D(Right) 8/W(Up)\n"<<endl;
+    			key= _getch();
+    			if((key == '2') || (key == 's')|| (key == 'S'))
     				ch=2;
-    				else if((key == '4') || (key == 'a')|| (key == 'A'))
+    			else if((key == '4') || (key == 'a')|| (key == 'A'))
     				ch=4;
-    				else if((key == '6') || (key == 'd')|| (key == 'D'))
+    			else if((key == '6') || (key == 'd')|| (key == 'D'))
     				ch=6;
-    				else if((key == '8')|| (key == 'w')|| (key == 'W'))
+    			else if((key == '8')|| (key == 'w')|| (key == 'W'))
     				ch=8;
-					m=doch(ch);
-					if(m==false)
-					{
-						cout<<"\nENTER CORRECT CHOICE\n";
-						goto xyz;
-					}
-					k=gamewon();
-					if(k==true)
-					{
-							cout<<"\n\nGAME WONN..!!!!\n";
-							break;
-					}
+			if(!doch(ch))
+			{
+				cout<<"\nENTER CORRECT CHOICE\n";
+				goto xyz;
+			}
+			if(gamewon())
+			{
+				cout<<"\n\nGAME WONN..!!!!\n";
+				break;
+			}
 		}
 return 0;
 }
